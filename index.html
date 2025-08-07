@@ -1,112 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SafeBracelet - Votre sécurité au poignet</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeTouch – Bracelet NFC de Sécurité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f7f7f7;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #fefefe;
+      scroll-behavior: smooth;
     }
-    header {
-      background: #ff4747;
+    .hero {
+      background: linear-gradient(to right, #000000bb, #000000bb),url(img/main.png); center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 2rem;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px;
+    .hero h1 {
+      font-size: 3rem;
     }
-    header p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
+    .hero .tagline {
+      font-size: 1.2rem;
+      margin: 1rem 0;
     }
     .btn {
-      padding: 15px 25px;
-      background: white;
-      color: #ff4747;
+      padding: 1rem 2rem;
+      background-color: #00b894;
+      color: white;
       border-radius: 30px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #019875;
+    }
+    .features {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .feature-img img {
+      max-width: 300px;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .commande {
+      background: #f1f1f1;
+      padding: 8rem 4rem;
+      text-align: center;
+    }
+    .btn-whatsapp {
+      padding: 1rem 2rem;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
       font-weight: bold;
     }
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      color: #333;
-    }
-    .features, .faq, .testimonials {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .feature, .faq-item, .testimonial {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background: #222;
-      color: white;
+    .btn-whatsapp:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>SafeBracelet</h1>
-  <p>Un simple geste, une sécurité vitale.</p>
-  <a class="btn" href="https://wa.me/212625454176?text=Je%20veux%20commander%20un%20bracelet%20d'urgence%20SafeBracelet">Commander sur WhatsApp</a>
-</header>
+  <!-- Section d'accueil -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>SafeTouch</h1>
+      <p class="tagline">Votre sécurité, à portée de poignet.</p>
+      <a href="https://wa.me/212625454176" class="btn">Commander maintenant</a>
+    </div>
+  </section>
 
-<section>
-  <h2>Comment ça marche ?</h2>
-  <div class="features">
-    <div class="feature">📲 Le sauveteur scanne le bracelet NFC</div>
-    <div class="feature">📋 Il accède à votre fiche d’urgence sécurisée</div>
-    <div class="feature">📍 Il peut vous aider ou prévenir un proche</div>
-  </div>
-</section>
+  <!-- Présentation -->
+  <section class="features">
+    <div class="container">
+      <h2 data-aos="fade-up">Un simple scan peut sauver une vie</h2>
+      <div class="feature-img" data-aos="zoom-in">
+        <img src="img/main1.png" width="6000" height="300" alt="Bracelet NFC SafeTouch">
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Pourquoi choisir SafeBracelet ?</h2>
-  <div class="features">
-    <div class="feature">✅ Sans batterie ni abonnement</div>
-    <div class="feature">🚨 Visible, rapide, efficace</div>
-  </div>
-</section>
+  <!-- Section de commande -->
+  <section id="commande" class="commande">
+    <h2 data-aos="fade-up">Commandez votre SafeTouch</h2>
+    <a href="https://wa.me/212625454176" class="btn-whatsapp">Commander via WhatsApp</a>
+  </section>
 
-<section>
-  <h2>Ils nous font confiance</h2>
-  <div class="testimonials">
-    <div class="testimonial">“Ma fille est épileptique, ce bracelet m’a rassurée.” - Samira M.</div>
-    <div class="testimonial">“Simple et utile pour mon père âgé.” - Anas E.</div>
-  </div>
-</section>
-
-<section>
-  <h2>Questions fréquentes</h2>
-  <div class="faq">
-    <div class="faq-item"><strong>Et si la personne n’a pas NFC ?</strong><br>Un QR Code est aussi imprimé sur le bracelet.</div>
-  </div>
-</section>
-
-<section style="text-align: center;">
-  <a class="btn" href="https://wa.me/212625454176?text=Je%20veux%20commander%20un%20bracelet%20SafeBracelet">🛒 Commander maintenant</a>
-</section>
-
-<footer>
-  &copy; 2025 SafeBracelet - Tous droits réservés
-</footer>
-
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
